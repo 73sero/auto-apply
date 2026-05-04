@@ -1,0 +1,22 @@
+{
+  "name": "@autoapply/ai",
+  "version": "0.1.0",
+  "description": "AI engine for AutoApply Pro: CV parsing, adaptation, cover letter generation, and job matching",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.4.0"
+  }
+}
