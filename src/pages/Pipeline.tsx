@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { CheckCircle, Clock, XCircle, ArrowRight, Filter } from 'lucide-react';
-import { mockJobs } from '../data/mockJobs';
 import { PipelineStage } from '../types';
 
 const stages: { id: PipelineStage; label: string; color: string; icon: any }[] = [
@@ -14,9 +13,9 @@ const stages: { id: PipelineStage; label: string; color: string; icon: any }[] =
 
 export default function Pipeline() {
   const [activeStage, setActiveStage] = useState<PipelineStage | 'all'>('all');
-  const jobs = mockJobs;
+  const jobs: any[] = [];
 
-  const filtered = activeStage === 'all' ? jobs : jobs.filter((j) => j.stage === activeStage);
+  const filtered = activeStage === 'all' ? jobs : jobs.filter((j: any) => j.stage === activeStage);
 
   return (
     <div className="space-y-6">

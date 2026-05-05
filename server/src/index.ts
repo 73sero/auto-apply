@@ -19,7 +19,7 @@ app.get("/health", (_req, res) => {
 app.use("/api/scrape", scrapeRouter);
 app.use("/api/cv", cvRouter);
 app.use("/api/apply", applyRouter);
-app.use("/api/jobs", pipelineRouter);
+app.use("/api/pipeline", pipelineRouter);
 app.use("/api/jobs", jobsRouter);
 
 app.listen(env.port, () => {
